@@ -37,16 +37,19 @@ public:
     std::set<std::string> arguments;
   };
 
+  std::string get_name() const { return name; }
   
-  std::set<std::unique_ptr<ClassTree>> get_parents() const { return parents; }
+  std::set<std::shared_ptr<ClassTree>> get_parents() const { return parents; }
   std::set<ClassTree::field> get_fields() const { return fields; }
   std::set<ClassTree::method> get_methods() const { return methods; }
 
-  void set_parents(const std::set<std::unique_ptr<ClassTree>> &_parents) { parents = _parents; }
+  void set_name(const std::string &_name) { name = _name; }
+  void set_parents(const std::set<std::shared_ptr<ClassTree>> &_parents) { parents = _parents; }
   void set_fields(const std::set<ClassTree::field> &_fields) { fields = _fields; }
   void set_methods(const std::set<ClassTree::method> &_methods) { methods = _methods; }
 private:
-  std::set<std::unique_ptr<ClassTree>> parents;
+  std::string name;
+  std::set<std::shared_ptr<ClassTree>> parents;
   std::set<ClassTree::field> fields;
   std::set<ClassTree::method> methods;
 
