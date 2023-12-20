@@ -35,7 +35,7 @@ MyCppParser::MyCppParser( const std::string& filename )
                                              field_ptr->name()
                     );
 
-                    _fields.push_back( _field );
+                    fields_.push_back( _field );
                 }
             }
 
@@ -60,7 +60,7 @@ MyCppParser::MyCppParser( const std::string& filename )
                                                _params
                     );
 
-                    _methods.push_back( _method );
+                    method_.push_back( _method );
                 }
             }
         }

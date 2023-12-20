@@ -9,5 +9,6 @@ int main () {
   ClassTree ast(cpp_parser);
 
   std::cout << ast.get_name() << std::endl;
+  std::cout << ast.get_methods().size() << std::endl;
 
 }
