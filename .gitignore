@@ -13,3 +13,7 @@ _deps
 build*
 
 .cache
+
+.idea
+
+cmake-build*

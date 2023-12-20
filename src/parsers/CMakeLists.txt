@@ -10,6 +10,7 @@ set_target_properties(parsers PROPERTIES LINKER_LANGUAGE CXX)
 
 target_include_directories( parsers PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} )
 
+target_link_libraries( parsers PUBLIC ClassTree )
+
 add_subdirectory( cpp_parser )
 
-target_link_libraries( parsers PUBLIC ClassTree )
