@@ -8,3 +8,6 @@ target_link_libraries(code2UML PRIVATE ClassTree)
 add_subdirectory(parsers)
 target_link_libraries(code2UML PRIVATE parsers CppParser )
 
+add_subdirectory(uml_generator)
+target_link_libraries(code2UML PRIVATE UmlGenerator )
+
